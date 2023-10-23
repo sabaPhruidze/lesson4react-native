@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 import React, { useState } from "react";
 export default function App() {
   const [people, setPeople] = useState([
@@ -15,7 +15,7 @@ export default function App() {
   ]);
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       {people.map((data) => {
         return (
           <View key={data.key}>
@@ -23,7 +23,7 @@ export default function App() {
           </View>
         );
       })}
-    </View>
+    </ScrollView>
   );
 }
 
