@@ -19,7 +19,7 @@ export default function App() {
       {people.map((data) => {
         return (
           <View key={data.key}>
-            <Text>{data.name}</Text>
+            <Text style={styles.data}>{data.name}</Text>
           </View>
         );
       })}
@@ -33,5 +33,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     paddingTop: 40,
     paddingHorizontal: 20,
+  },
+  data: {
+    marginTop: 24,
+    padding: 30,
+    backgroundColor: "pink",
+    fontSize: 24,
   },
 });
